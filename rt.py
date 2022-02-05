@@ -38,7 +38,7 @@ def rt(tags):
         try:
             if not tweet.retweeted:
                 print('Retweeted')
-                #tweet.retweet()
+                tweet.retweet()
                 #Creates the twitter url
                 url = "twitter.com/" + tweet.user.screen_name + "/status/" + str(tweet.id)
                 #Puts up the data in a dictionary

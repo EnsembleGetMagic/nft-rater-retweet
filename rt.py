@@ -29,16 +29,16 @@ def rt(tags):
     #Store the tags in a variable
     search = tags
     #Set a number of tweets to search
-    nmbrtws = 200
+    nmbrtws = 50
     #Sleep time between to retweets
-    sleepTime = 432
+    sleepTime = 1782
 
     #Search the tweets with the keywords from the query
     for tweet in tweepy.Cursor(api.search_tweets, q = search, result_type = "recent").items(nmbrtws):
         try:
             if not tweet.retweeted:
                 print('Retweeted')
-                tweet.retweet()
+                #tweet.retweet()
                 #Creates the twitter url
                 url = "twitter.com/" + tweet.user.screen_name + "/status/" + str(tweet.id)
                 #Puts up the data in a dictionary
